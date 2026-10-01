@@ -27,7 +27,9 @@
     "start": "react-scripts start",
     "build": "cross-env CI=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:ci": "react-scripts test --watchAll=false --coverage",
+    "generate-docs": "node scripts/generate-docs.js"
   },
   "eslintConfig": {
     "extends": [
@@ -52,5 +54,9 @@
     "@types/styled-components": "^5.1.21",
     "@types/uuid": "^8.3.4",
     "cross-env": "^10.1.0"
+  },
+  "engines": {
+    "node": ">=22 <23",
+    "npm": ">=10"
   }
 }
